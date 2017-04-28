@@ -14,3 +14,29 @@ file_data = open('file_name.txt')
 # Once done close this
 file_data.close()
 ```
+example
+
+```Python
+# importing os from the standard library
+import os
+# get the current working directory
+os.getcwd()
+# change the path to the directory where the file is
+os.chdir('../data')
+# get the current working directory again to confirm you changed correctly
+
+data =  open('file_name.txt')
+# using read line to get a line from our file and print it.
+print(data.readline(), end='')
+
+# rewind back to start of a file.
+data.seek(0)
+
+for each_line in data
+    print(each_line, end='')
+
+# once you are done with reading the file make you close it.
+data.close()
+
+
+```
