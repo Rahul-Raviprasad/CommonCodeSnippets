@@ -1,6 +1,7 @@
 ## Arrays
+Arrays are the most commonly used data structure.
 
-In Java:
+### In Java:
 
 
 ```java
@@ -17,3 +18,16 @@ String[] myStringArray = new String[]{"a","b","c"};
 
 Stack overflow documentation on arrays
 http://stackoverflow.com/documentation/java/99/arrays/404/creating-and-initializing-arrays#t=201607261943570177
+
+
+### In Javascript:
+you can store any type of data in the array. It doesn't have to be of the same data type.
+
+```Javascript
+var a = [];
+a.push(2);
+a.push("string");
+
+// remove from end
+a.pop();
+```
