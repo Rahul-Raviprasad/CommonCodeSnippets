@@ -1,5 +1,5 @@
 # Class
-Class is common way to have inheritance in many Languages
+Class is common way to define a template for creating objects in many Languages
 
 ### Java
 
