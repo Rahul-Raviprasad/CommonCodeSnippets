@@ -23,6 +23,6 @@ Examples
 // when you want to remove all the non-digit characters from a string.
 // this could be used for validation, anywhere from ensuring you get a phone numbers, pin codes or values as input where you are expecting numbers only.
 var str = "3q41t5 31"; // here q, t and space are non digit characters
-var new_str = str.replace(/\D+/g, '');
+var new_str = str.replace(/\D+/g, ''); // the g after the regular expression is an option or flag that performs a global search, looking in the whole string and returning all matches.
 
 ```
