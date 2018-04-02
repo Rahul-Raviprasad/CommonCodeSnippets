@@ -31,8 +31,12 @@ But in a big real world problem, there will be multiple place the class will be 
 2. Problem 2: Modifying the tea class for example parameterizing the its constructor
 3. Problem 3: You can't test Restaurant class without including Tea class ie. without including it's dependencies.
 
-things to note:-
+Few things to note:-
 * Restaurant class is dependent on Tea class
-* they are tightly coupled
+* These classes are tightly coupled
 
 Using the Dependency injection concept, we should never create an object inside another class, using a new operator.
+We would like to outsource the task of handling all dependencies of an object to some third-party (Instead of re inventing the wheel).
+So the idea is that, when a class has Dependency like the Restaurant class, then when its object is created, the dependencies (like Tea) are dynamically created and provided to it from outside.
+
+To decouple the classes in our case, we can introduce an interface.
