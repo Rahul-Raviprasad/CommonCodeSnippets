@@ -40,3 +40,36 @@ We would like to outsource the task of handling all dependencies of an object to
 So the idea is that, when a class has Dependency like the Restaurant class, then when its object is created, the dependencies (like Tea) are dynamically created and provided to it from outside.
 
 To decouple the classes in our case, we can introduce an interface.
+```java
+interface IHotDrink {
+  public void prepareTea();
+}
+// lets modify the Tea class to implement this interface
+Class Tea implements IHotDrink {
+  public void prepareTea() {
+    System.out.println("Tea ready");
+  }
+}
+
+// Now in the Restaurant class, we will implement a constructor or a setter method for the third party to create a Tea object and it for us.
+Class Restaurant {
+  IHotDrink hotDrink;
+
+  //constructor: so when creating Restaurant itself you the third party DI passes the tea object
+  Restaurant(IHotDrink hotDrink) {
+    hotDrink = this.hotDrink;
+  }
+
+  // we can also get it passed from a setter method
+  public void setHotDrink(IHotDrink hotDrink) {
+    hotDrink = this.hotDrink;
+  }
+
+  // the old method
+  public void prepareHotDrink() {
+    hotDrink.prepareTea();
+  }
+}
+```
+Now we simply have to instruct whatever DI system we are using to pass the object when the constructor of the dependent class is called.
+In the case of Spring we will mention in the configuration file.
