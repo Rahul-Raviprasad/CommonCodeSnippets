@@ -77,3 +77,4 @@ In the case of Spring we will mention in the configuration file.
 
 ### Commonly used terms
 * Wiring: The act of creating associations between different application components is called wiring. In spring there are different ways to wire components, one such way is via XML.
+In a spring application, an application context loads bean definition and wires them together.
