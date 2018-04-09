@@ -78,3 +78,11 @@ In the case of Spring we will mention in the configuration file.
 ### Commonly used terms
 * Wiring: The act of creating associations between different application components is called wiring. In spring there are different ways to wire components, one such way is via XML.
 In a spring application, an application context loads bean definition and wires them together.
+
+### Multiple Containers in Spring
+Spring  comes with several container implementations that can be categorized into two distinct types.
+1. Bean factories  (defined  by the org.springframework.beans.factory.BeanFactory  interface) are the  simplest of containers, providing basic  support for  DI.
+2. Application contexts  (defined  by the org.springframework.context.ApplicationContext  interface) build on the notion of a  bean  factory by providing application  framework services, such  as the ability  to resolve textual messages from  a properties file  and  the  ability to publish application events  to  interested event  listeners.
+
+* it’s  possible  to  work with  Spring  using  either bean factories or  application contexts, bean factories are often too low-level for most applications.
+* Therefore,  application  contexts  are  preferred  over bean factories.
