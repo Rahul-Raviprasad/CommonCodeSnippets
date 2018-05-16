@@ -35,6 +35,8 @@ $scope.speakText = function() {
 };
 ```
 
+This plugin uses the AVSpeechSynthesizer on iOS and the android.speech.tts.TextToSpeech package on Android, so it’s really a simple mapper of the best native functions for giving out text.
+
 ### Voice Recognition
 For voice recognition we need to use a plugin again
 
@@ -56,3 +58,11 @@ once the plugin gets install and added to config file, include the following cod
     recognition.start();
   };
 ```
+
+On Android this plugin uses the native android.speech.SpeechRecognizer package, on iOS it’s a bit harder to achieve this task so the author used the iSpeech SDK which you can test for free for now. If you plan to use this SDK in production additional costs may arise.
+
+
+## Debugging Ionic app tips
+1. the first is to run it with live reload.
+2. install a chrome plugin called inspect-devices.
+3. Use device monitor provided by android. https://developer.android.com/studio/profile/monitor
