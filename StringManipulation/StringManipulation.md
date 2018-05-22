@@ -19,3 +19,10 @@ B.toUpperCase();
 A.length();
 
 ```
+```js
+var a = "apple";
+var b = "zebra";
+
+console.log(a>b?"Yes":"No"); // prints No.
+
+```
